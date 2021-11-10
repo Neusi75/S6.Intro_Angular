@@ -1,0 +1,34 @@
+
+<div class="container-fluid p-3">
+  <div class="row">
+    <div class="col">
+      <div class="btn-group d-flex" role="group">
+        <button class="btn btn-warning" (click)="prev()"> << ANTERIOR </button>
+    
+    
+        <button class="btn btn-warning" (click)="next()">  SEGÜENT >></button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row p-3" id="frases">
+    <div class="col">
+  
+      <p *ngFor="let fraseHistoria of frasesHistoria; let i=index" class="frase"
+      [ngClass]="{'fraseSelect': i === currentSentence, fraseNoSelect: i!== currentSentence}"> 
+      {{fraseHistoria}} 
+        
+      </p>
+    </div>
+  
+  </div>
+
+</div>
+
+
+<!--<p>
+  "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial"
+</p>-->
+
+
